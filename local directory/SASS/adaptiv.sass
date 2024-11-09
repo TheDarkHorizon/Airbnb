@@ -1,0 +1,76 @@
+
+
+    
+// Original points
+@media (max-width: 1878px)
+    .cards-container
+        grid-template-columns: repeat(5, 1fr)  
+
+    
+@media (max-width: 1640px)
+    .cards-container
+        grid-template-columns: repeat(4, 1fr)       
+
+
+@media (max-width: 1128px)
+    .header
+        &__main-header-wrapper
+            position: relative
+    .cards-container
+        grid-template-columns: repeat(3, 1fr) 
+
+
+@media (max-width: 950px)
+    .search-field
+        width: 100%
+        &__search-button-wrapper
+            width: 100%
+        &__search-field-item
+            min-width: 128px
+
+    .search-field-item
+        &_long
+            min-width: 200px
+
+
+    .cards-container
+        grid-template-columns: repeat(2, 1fr) 
+    
+
+@media (max-width: 768px) // Переход поля поиска
+    .header
+        padding-top: 16px
+        &__main-header-wrapper,
+        &__nav-menu
+            display: none
+        &__search-field-wrapper
+            // justify-content: start
+            justify-content: space-between
+            margin-right: 16px
+        &__show-filters-button
+            display: flex
+
+
+    .search-field
+        margin-right: 12px
+        max-width: 600px
+        height: 56px
+        // display: none // test
+        &__search-hr-wrapper
+            display: none
+        &__search-field-item
+            display: none
+        &__search-button-wrapper,
+        &__search-button
+            display: none
+
+    .searc-field-item
+        &_long
+            display: none
+
+
+@media (max-width: 550px)
+    .cards-container
+        grid-template-columns: repeat(1, 1fr) 
+
+

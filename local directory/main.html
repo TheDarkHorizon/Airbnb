@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb | Vacation rentals, cabins, beach houses and more</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/adaptiv.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container"> <!-- Смешанный -->
+
+            <!-- Logo + user-menu button -->
+            <div class="header__main-header-wrapper">
+                <div class="header__logo-wrapper">
+                    <a class="header__logo-link" href="#">
+                        <img class="header__logo" src="icons/Logo.svg" alt="Airbnb">
+                    </a>
+                </div>
+                <div class="header__user-panel">
+                    <a class="header__your-locations-link" href="#">
+                        <p class="header__your-locations">Airbnb your home</p>
+                    </a>
+                    <div class="header__language-settings">
+                        <img class="header__language-settings-icon" src="icons/Language.svg">
+                    </div>
+                    <button class="header__user-menu-button">
+                        <div class="header__user-menu">
+                            <img class="header__user-menu-icon" src="icons/User-menu.svg">
+                        </div>
+                        <div class="header__user-picture">?</div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search field -->
+            <div class="header__menu-header-wrapper" id="menuHeaderWrapper">
+                <ul class="header__nav-menu" id="navMenu">
+                    <li class="header__item-nav-menu">
+                        <a class="header__item-nav-menu-link" href="#">Stays</a>
+                    </li>
+                    <li class="header__item-nav-menu">
+                        <a class="header__item-nav-menu-link" href="#">Experiences</a>
+                    </li>
+                    <li class="header__item-nav-menu">
+                        <a class="header__item-nav-menu-link" href="#">Online Experiences</a>
+                    </li>
+                </ul>
+
+                <!-- Search field -->
+                <div class="header__search-field-wrapper">
+                    <div class="header__search-field search-field" id="searchField"> <!-- Block + element -->
+
+                        <!-- Search button -->
+                        <div class="search-field__search-button-wrapper">
+                            <button class="search-field__search-button">
+                                <img class="search-field__search-button-image" src="icons/Search.svg">
+                            </button>
+                        </div>
+
+                        <!-- Search elements -->
+                        <div class="search-field__search-field-item search-field-item_long">
+                            <p class="search-field__search-field-title">Where</p>
+                            <p class="search-field__search-field-subtitle">Search destinations</p>
+                        </div>
+                        <div class="search-field__search-hr-wrapper">
+                            <hr class="search-field__search-dividing-hr">
+                        </div>
+                        <div class="search-field__search-field-item">
+                            <p class="search-field__search-field-title">Check in</p>
+                            <p class="search-field__search-field-subtitle">Add dates</p>
+                        </div>
+                        <div class="search-field__search-hr-wrapper">
+                            <hr class="search-field__search-dividing-hr">
+                        </div>
+                        <div class="search-field__search-field-item">
+                            <p class="search-field__search-field-title">Check out</p>
+                            <p class="search-field__search-field-subtitle">Add dates</p>
+                        </div>
+                        <div class="search-field__search-hr-wrapper">
+                            <hr class="search-field__search-dividing-hr">
+                        </div>
+                        <div class="search-field__search-field-item search-field-item_long">
+                            <p class="search-field__search-field-title">Who</p>
+                            <p class="search-field__search-field-subtitle">Add guests</p>
+                        </div>
+
+                        <!-- Search dropdown -->
+                        <div class="search-field__search-dropdown hidden"> <!-- Смешанный. for change -->
+                            <p>Some content here...</p>
+                        </div>
+
+                    </div>
+                    <button class="header__show-filters-button">
+                        <img class="header__show-filters-img" src="icons/Show-filters.svg">
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- <div class="toolbar-section"> 
+        <div class="toolbar-section__toolbar-section-wrapper container"> 
+            <div class="toolbar-section__categories-slider">
+                <div class="toolbar-section__slider-buttons-wrapper">
+                    <button class="toolbar-section__nav-button nav-button prev-sl-button" id="prevButton"> 
+                        <img class="slider-button__slider-button-image" src="icons/Prev-btn.svg">
+                    </button>
+                    <button class="toolbar-section__nav-button nav-button next-sl-button" id="nextButton"> 
+                        <img class="slider-button__slider-button-image" src="icons/Next-btn.svg">
+                    </button>
+                </div>
+                <div class="toolbar-section__categories-wrapper swiper-container" id="categoriesWrapper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="categories-wrapper__category-wrapper category-wrapper">
+                                <div class="category-wrapper__icon-category-wrapper icon-category-wrapper">
+                                    <img class="icon-category-wrapper__icon-category icon-category" src="icons/Caves-icon.svg">
+                                </div>
+                                <p class="category-wrapper__category-name category-name">Caves</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+            <p>test</p>
+        </div>
+    </div> -->
+    
+    
+
+    <div class="catalog-section">
+        <div class="catalog-section__catalog-section-wrapper container">
+            <div class="catalog-section__cards-container cards-container" id="gridContainer">
+
+                <div class="cards-container__card-location">
+                    <div class="cards-container__image-card-wrapper">
+                        <img class="cards-container__image-card img-card" src="#" alt="">
+                    </div>
+                    <div class="cards-container__name-location-wrapper">
+                        <p class="cards-container__name-location">Bourré, France</p>
+                        <p class="cards-container__rating-location">
+                            <img class="cards-container__rating-image" src="icons/Rating-star.svg">
+                            4,5
+                        </p>
+                    </div>
+                    <p class="cards-container__distance-location">8,015 km away</p>
+                    <p class="cards-container__rental-period">Apr. 19 – 24</p>
+                    <p class="cards-container__rental-price">$154 CAD </p>
+                </div>
+
+                <div class="cards-container__card-location">
+                    <div class="cards-container__image-card-wrapper">
+                        <img class="cards-container__image-card img-card" src="#" alt="">
+                    </div>
+                    <div class="cards-container__name-location-wrapper">
+                        <p class="cards-container__name-location">Bourré, France</p>
+                        <p class="cards-container__rating-location">
+                            <img class="cards-container__rating-image" src="icons/Rating-star.svg">
+                            4,5
+                        </p>
+                    </div>
+                    <p class="cards-container__distance-location">8,015 km away</p>
+                    <p class="cards-container__rental-period">Apr. 19 – 24</p>
+                    <p class="cards-container__rental-price">$154 CAD </p>
+                </div>
+
+                <div class="cards-container__card-location">
+                    <div class="cards-container__image-card-wrapper">
+                        <img class="cards-container__image-card img-card" src="#" alt="">
+                    </div>
+                    <div class="cards-container__name-location-wrapper">
+                        <p class="cards-container__name-location">Bourré, France</p>
+                        <p class="cards-container__rating-location">
+                            <img class="cards-container__rating-image" src="icons/Rating-star.svg">
+                            4,5
+                        </p>
+                    </div>
+                    <p class="cards-container__distance-location">8,015 km away</p>
+                    <p class="cards-container__rental-period">Apr. 19 – 24</p>
+                    <p class="cards-container__rental-price">$154 CAD </p>
+                </div>
+
+                <div class="cards-container__card-location">
+                    <div class="cards-container__image-card-wrapper">
+                        <img class="cards-container__image-card img-card" src="#" alt="">
+                    </div>
+                    <div class="cards-container__name-location-wrapper">
+                        <p class="cards-container__name-location">Bourré, France</p>
+                        <p class="cards-container__rating-location">
+                            <img class="cards-container__rating-image" src="icons/Rating-star.svg">
+                            4,5
+                        </p>
+                    </div>
+                    <p class="cards-container__distance-location">8,015 km away</p>
+                    <p class="cards-container__rental-period">Apr. 19 – 24</p>
+                    <p class="cards-container__rental-price">$154 CAD </p>
+                </div>
+
+                <div class="cards-container__card-location">
+                    <div class="cards-container__image-card-wrapper">
+                        <img class="cards-container__image-card img-card" src="#" alt="">
+                    </div>
+                    <div class="cards-container__name-location-wrapper">
+                        <p class="cards-container__name-location">Bourré, France</p>
+                        <p class="cards-container__rating-location">
+                            <img class="cards-container__rating-image" src="icons/Rating-star.svg">
+                            4,5
+                        </p>
+                    </div>
+                    <p class="cards-container__distance-location">8,015 km away</p>
+                    <p class="cards-container__rental-period">Apr. 19 – 24</p>
+                    <p class="cards-container__rental-price">$154 CAD </p>
+                </div>
+
+                <div class="cards-container__card-location">
+                    <div class="cards-container__image-card-wrapper">
+                        <img class="cards-container__image-card img-card" src="#" alt="">
+                    </div>
+                    <div class="cards-container__name-location-wrapper">
+                        <p class="cards-container__name-location">Bourré, France</p>
+                        <p class="cards-container__rating-location">
+                            <img class="cards-container__rating-image" src="icons/Rating-star.svg">
+                            4,5
+                        </p>
+                    </div>
+                    <p class="cards-container__distance-location">8,015 km away</p>
+                    <p class="cards-container__rental-period">Apr. 19 – 24</p>
+                    <p class="cards-container__rental-price">$154 CAD </p>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="test-section">
+
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+</body>
+</html>
+
+
+
+
+
+
+<!-- shift + lbm - чтобы не было как тогда с header-->
+

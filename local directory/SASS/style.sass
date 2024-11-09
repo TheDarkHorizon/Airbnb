@@ -1,0 +1,365 @@
+
+*
+    box-sizing: border-box
+
+
+.container
+    position: relative
+    max-width: 1760px
+    width: 90%
+    margin: 0 auto
+    // background-color: #f5f1eb
+    
+
+.nav-button
+    height: 32px
+    width: 32px
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #fff
+    border-radius: 100%
+    border: 1px solid rgb(179, 179, 179)
+    
+
+.header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    background-color: white
+    border-bottom: 1px solid rgb(235, 235, 235)
+    transition: height 0.3s ease
+    z-index: 1000
+    &__main-header-wrapper
+        width: 100%
+        height: 80px
+        pointer-events: none
+        position: absolute
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__logo-wrapper
+        pointer-events: auto
+    &__user-panel
+        pointer-events: auto
+        display: flex
+        align-items: center
+    &__your-locations-link
+        margin-right: 24px
+    &__language-settings
+        margin-right: 24px
+    &__user-menu-button
+        height: 48px
+        display: flex
+        align-items: center
+        padding: 8px 8px 8px 16px
+        border: 1px solid rgb(221, 221, 221)
+        border-radius: 30px
+        background-color: #fff
+    &__user-menu
+        margin-right: 16px
+        &:hover
+            box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.1)
+    &__user-picture
+        color: #fff // for dev // text
+        overflow: hidden
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: rgb(36, 36, 36)
+        border-radius: 100%
+        height: 32px
+        width: 32px
+    &__menu-header-wrapper
+        width: 100%
+        display: flex
+        flex-direction: column
+    &__nav-menu
+        height: 80px
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: opacity 0.3s ease
+    &__item-nav-menu
+        margin-right: 24px
+        line-height: 24px
+        &:last-child
+            margin-right: 0px   
+    &__search-field-wrapper
+        display: flex
+        justify-content: center
+        margin-bottom: 22px
+    &__show-filters-button
+        display: none
+        justify-content: center
+        align-items: center
+        min-height: 56px
+        min-width: 56px
+        border-radius: 100%
+        border: 1px solid #B0B0B0 
+        background: #fff
+        
+
+
+.search-field    
+    display: flex
+    height: 66px
+    border: 1px solid rgb(221, 221, 221)
+    box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.1)
+    border-radius: 32px
+    &__search-button-wrapper
+        pointer-events: none
+        position: absolute
+        height: 66px
+        width: 855px
+        padding: 8px 12px
+    &__search-button
+        pointer-events: auto
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 48px
+        height: 48px
+        border-radius: 100%
+        float: right
+        background: rgb(255, 56, 92)
+        border: none
+        &:hover
+            background-color: rgb(221, 16, 98)
+    &__search-field-item
+        padding: 14px 24px 
+        border-radius: 32px
+        height: 100%
+        width: 140px
+
+        &:hover
+            background-color: #e6e6e6 // for del
+    &__search-field-title
+        line-height: 16px
+        margin-bottom: 2px
+    &__search-field-subtitle
+        line-height: 18px
+    &__search-hr-wrapper
+        padding: 16px 1px 16px 1px
+        width: 3px
+    &__search-dividing-hr
+        margin: 0
+        border: none
+        width: 1px
+        height: 100%
+        background-color: rgb(221, 221, 221)
+    &__search-dropdown 
+        display: none // скрыт по умолчанию
+        position: absolute
+        // left: 800px
+        width: 500px
+        max-width: 600px
+        padding: 20px
+        background-color: white
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+        border-radius: 8px
+        z-index: 10
+        
+
+
+// Модификатор элементов поля поиска
+.search-field-item
+    &_long
+        padding: 14px 32px
+        width: 282px 
+
+
+
+// .toolbar-section
+//     position: fixed
+//     top: 168px //* Под header */
+//     left: 0
+//     right: 0
+//     height: 106px
+//     background-color: #fff
+//     border-bottom: 1px solid rgb(235, 235, 235)
+//     z-index: 2
+//     transition: top 0.3s ease
+//     &__toolbar-section-wrapper
+//         display: flex
+//         justify-content: space-between
+//         align-content: center
+//         justify-content: center
+//     &__categories-slider
+//         width: 80%
+//     &__slider-buttons-wrapper
+//         -webkit-box-shadow: 60px 0px 20px -5px rgba(255, 255, 255, 1) inset, -60px 0px 20px -5px rgba(255, 255, 255, 1) inset
+//         -moz-box-shadow: 60px 0px 20px -5px rgba(255, 255, 255, 1) inset, -60px 0px 20px -5px rgba(255, 255, 255, 1) inset
+//         box-shadow: 60px 0px 20px -5px rgba(255, 255, 255, 1) inset, -60px 0px 20px -5px rgba(255, 255, 255, 1) inset
+//         z-index: 2
+//         display: flex
+//         width: 100%
+//         justify-content: space-between
+//         height: 104px
+//         align-items: center
+//     &__categories-wrapper
+//         position: absolute
+//         overflow: hidden
+//         height: 106px
+//         display: flex
+//         width: 100%
+//         padding-top: 28px
+//         transition: transform 0.3s ease //* Плавный переход при перемещении */
+//         &__category-wrapper
+//             margin-right: 32px
+
+
+
+    
+// .category-wrapper
+//     display: flex
+//     flex-direction: column
+//     align-items: center
+//     &__icon-category-wrapper
+//         margin-bottom: 8px
+
+
+// .icon-category-wrapper
+//     height: 24px
+//     width: 24px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.test-section 
+    height: 4200px //* Чтобы было видно скролл */
+
+
+
+
+
+
+
+
+
+.catalog-section
+    padding-top: 274px
+
+
+.cards-container
+    display: grid
+    gap: 24px
+    grid-template-columns: repeat(auto-fill)
+    grid-template-columns: repeat(6, 1fr) // Фиксируем 5 колонок на больших экранах 
+    &__image-card-wrapper
+        aspect-ratio: 272 / 260
+        // width: 272px
+        // height: 260px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 12px
+        background-color: #eeeeee 
+        
+
+
+// .card-location
+
+
+
+ 
+
+.content-card-wrapper
+    padding: 16px 10px 0px 10px
+    &__type-location
+        margin-bottom: 4px
+    &__name-location
+        margin-bottom: 4px
+    &__opening-hours-location
+        margin-bottom: 4px
+
+
+
+.name-location-wrapper
+    display: flex
+    justify-content: space-between
+
+    
+// #star-five {
+//    margin: 50px 0;
+//    position: relative;
+//    display: block;
+//    color: red;
+//    width: 0px;
+//    height: 0px;
+//    border-right:  100px solid transparent;
+//    border-bottom: 70px  solid red;
+//    border-left:   100px solid transparent;
+//    -moz-transform:    rotate(35deg);
+//    -webkit-transform: rotate(35deg);
+//    -ms-transform:     rotate(35deg);
+//    -o-transform:      rotate(35deg);
+// }
+// #star-five:before {
+//    border-bottom: 80px solid red;
+//    border-left: 30px solid transparent;
+//    border-right: 30px solid transparent;
+//    position: absolute;
+//    height: 0;
+//    width: 0;
+//    top: -45px;
+//    left: -65px;
+//    display: block;
+//    content: '';
+//    -webkit-transform: rotate(-35deg);
+//    -moz-transform:    rotate(-35deg);
+//    -ms-transform:     rotate(-35deg);
+//    -o-transform:      rotate(-35deg);
+   
+// }
+// #star-five:after {
+//    position: absolute;
+//    display: block;
+//    color: red;
+//    top: 3px;
+//    left: -105px;
+//    width: 0px;
+//    height: 0px;
+//    border-right: 100px solid transparent;
+//    border-bottom: 70px solid red;
+//    border-left: 100px solid transparent;
+//    -webkit-transform: rotate(-70deg);
+//    -moz-transform:    rotate(-70deg);
+//    -ms-transform:     rotate(-70deg);
+//    -o-transform:      rotate(-70deg);
+//    content: ''
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // class for JS
+.header-shrink 
+    height: 80px //* Новая высота шапки */
+
+.toolbar-adjust 
+    top: 80px //* Под сжатой шапкой */
+
+
+
+    
+
